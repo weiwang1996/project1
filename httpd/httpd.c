@@ -1,6 +1,6 @@
 #include "httpd.h"
 
-void print_log(char *msg, int level)
+void print_log(char *msg, int level)//日志函数
 {
 #ifdef _STDOUT_
 	const char * const level_msg[]={
@@ -14,7 +14,7 @@ void print_log(char *msg, int level)
 #endif
 }
 
-int startup(const char *ip, int  port)
+int startup(const char *ip, int  port)//创建套接字
 {
 	int sock = socket(AF_INET, SOCK_STREAM, 0);
 	if(sock < 0){
