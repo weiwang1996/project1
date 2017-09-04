@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("get client [%s:%d]\n",\
 				inet_ntoa(client.sin_addr),\
 				ntohs(client.sin_port));
-
+//可插入线程库和
 		pthread_t id;
 		int ret = pthread_create(&id, NULL,\
 				handler_request, (void *)new_sock);
